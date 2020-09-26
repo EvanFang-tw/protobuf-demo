@@ -1,3 +1,7 @@
+# Clone
+1. Clone this repo to under your `$GOPATH/src`, if you want to run go example.
+2. And name the project folder: `protobufdemo`
+
 # Protoc
 Download here: https://github.com/protocolbuffers/protobuf/releases/tag/v3.0.0
 
