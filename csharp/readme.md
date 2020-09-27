@@ -2,8 +2,16 @@
 
 ## Create new project
 ```sh
-cd csharp
 dotnet new console --name protobufapp
+```
+
+## Compile protobuf file
+```sh
+# Prepare output directory
+mkdir protobufapp/protos
+
+# Compile
+protoc --csharp_out=./protobufapp/protos *.proto
 ```
 
 ## Install Protobuf Nu-Get Package
@@ -14,19 +22,7 @@ cd protobufapp
 dotnet add package Google.Protobuf
 ```
 
-## Compile protobuf file
-```sh
-# Prepare output directory
-mkdir protos
-cd ../..
-
-# Compile
-protoc --csharp_out=./csharp/protobufapp/protos *.proto
-```
-
 ## Run
 ```sh
-cd csharp/protobufapp
-
 dotnet run
 ```

@@ -16,13 +16,13 @@ export PATH=$PATH:$GOPATH/bin
 
 ## Compile proto file
 ```sh
-protoc --go_out=./golang/protos *.proto
+protoc --go_out=./protos *.proto
 
 # Check
-cat ./golang/example.pb.go
+cat ./protos/example.pb.go
 ```
 
 ## Run
 ```sh
-cd ./golang && go run main.go
+go run main.go
 ```
