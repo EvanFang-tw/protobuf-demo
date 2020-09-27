@@ -6,6 +6,7 @@ import (
 
 	pb "protobufdemo/golang/protos"
 
+	"github.com/golang/protobuf/ptypes"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -18,6 +19,7 @@ func main() {
 		Id:       999,
 		Username: "Evan",
 		Password: "1234",
+		Birthday: ptypes.TimestampNow(),
 	}
 	// Transfer user to binary data
 	out, _ := proto.Marshal(user)
@@ -35,4 +37,7 @@ func main() {
 
 	fmt.Println("User from protobuf:")
 	fmt.Println(theUer)
+
+	fmt.Println("User's birthday:")
+	fmt.Println(ptypes.TimestampString(theUer.Birthday))
 }
