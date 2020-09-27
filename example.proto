@@ -1,6 +1,8 @@
 syntax = "proto3";
 package protobuf;
 
+option csharp_namespace = "Messages";
+
 import "google/protobuf/timestamp.proto";
 
 message User {  
